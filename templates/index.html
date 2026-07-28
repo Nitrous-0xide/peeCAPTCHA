@@ -1,0 +1,29 @@
+<html>
+    <body>
+        
+        <form method="POST" action="/api/v1/login">
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        {% if success %}
+                <p style="color: green;">{{ success }}</p>
+        {% endif %}
+            <label>Enter Captcha:</label><br>
+            <img id="captcha-img" src="/captcha.png" alt="CAPTCHA" style="cursor: pointer; vertical-align: middle;" title="Click to refresh CAPTCHA" onclick="refreshCaptcha()">
+            
+            <br>
+            
+            <input type="text" name="captcha_input" required>
+            <button type="submit">Register</button>
+        </form>
+    </body>
+    <script>
+function refreshCaptcha() {
+    document.getElementById('captcha-img').src = '/captcha.png?t=' + new Date().getTime();
+}
+
+window.onload = function() {
+    refreshCaptcha();
+};
+</script>
+</html>
