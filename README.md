@@ -20,3 +20,6 @@ Ensure you have Pillow installed:
 
 ```bash
 pip install Pillow
+```
+## DEMO
+There is a demo program included with the library `peeCAPTCHA.py`. `app.py` and `templates/index.html` show proper usage of the library.
