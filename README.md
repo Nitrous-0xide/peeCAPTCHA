@@ -1,4 +1,4 @@
-# PeeCaptcha 🧩
+# PeeCaptcha V1 🧩
 
 A lightweight, customizable Python library for generating simple, distorted image CAPTCHAs using Pillow (`PIL`). Designed to protect web forms (like Flask or FastAPI apps) from basic automated bots while remaining easy for humans to solve.
 
